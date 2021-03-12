@@ -4,8 +4,8 @@ This is a Lambda function that can be triggered upon an expired access token. To
 
 This example is used with the Constant Contact v3 API. Their server-flow still requires a client to approve and receive the first set of tokens. There is an additional Lambda API Server in this repository to facilitate that. Once you have the first access token / refresh token your Lambda function should be self-sufficient for automation. I decided to open this repo to the public when I was struggling to find an existing example using this flow.
 
-`sam local start-api`
-`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json`
+`sam local start-api`\
+`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json`\
 
 ## Prerequisites
 - AWS CLI
@@ -14,13 +14,15 @@ This example is used with the Constant Contact v3 API. Their server-flow still r
 - AWS Secrets Manager Secret
 
 ## Setup
-`npm install`
-`sam local start-api --profile YOUR_LOCAL_AWS_CLI_PROFILE`
-Navigate to http://localhost:3000
-[ Picture ]
-Allow your application access.
-Test your stored token on an authorized API Endpoint, this example checks your user privileges.
-`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json --profile YOUR_LOCAL_AWS_CLI_PROFILE`
+1. `npm install`\
+2. `sam local start-api --profile YOUR_LOCAL_AWS_CLI_PROFILE`\
+3. Navigate to http://localhost:3000
+4. Allow your application access.
+
+![Screen Shot 2021-03-11 at 10 21 48 PM](https://user-images.githubusercontent.com/4179018/110896900-202cb800-82c2-11eb-95a1-18b9ff90212f.png)
+
+6. Test your stored token on an authorized API Endpoint, this example checks your user privileges.
+`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json --profile YOUR_LOCAL_AWS_CLI_PROFILE`\
 
 ### AWS Secrets Manager
 AWS Secrets Manager is being used to store and exchange tokens. Login to your AWS Console and navigate [here](https://console.aws.amazon.com/secretsmanager) to create a new secret.
@@ -28,11 +30,13 @@ AWS Secrets Manager is being used to store and exchange tokens. Login to your AW
 1. Select "Other type of secrets"
 2. Add two rows, one for "access_token" and one for "refresh_token". Enter any value for now.
 
-[ Picture ]
+![Screen Shot 2021-03-11 at 9 50 17 PM](https://user-images.githubusercontent.com/4179018/110896997-418da400-82c2-11eb-93b1-9fcaea22d775.png)
 
 3. Name your secret and then add that name to the environment variables under "AWS_SECRET_ID".
 
-[ picture ] [ picture]
+![Screen Shot 2021-03-11 at 9 52 36 PM](https://user-images.githubusercontent.com/4179018/110897015-481c1b80-82c2-11eb-9d87-dbe9dc51f9f2.png)
+
+![Screen Shot 2021-03-11 at 11 35 19 PM](https://user-images.githubusercontent.com/4179018/110897103-7568c980-82c2-11eb-98e8-6d65ba63e623.png)
 
 4. "Next" > "Next" and "Store"
 
@@ -51,6 +55,16 @@ This example is used to connect to the [Constant Contact V3 API](https://v3.deve
 1. Navigate to [My Applications](https://v3.developer.constantcontact.com/login/index.html) and create a "New Application".
 2. Change the Redirect URI to include "http://localhost:3000/callback".
 3. Copy the API Key to the environment variables under "CC_API_KEY".
+
+![Screen Shot 2021-03-11 at 9 56 11 PM](https://user-images.githubusercontent.com/4179018/110897191-9cbf9680-82c2-11eb-8af8-2ce035b877d0.png)
+
 4. "Generate Secret" and copy this secret to the environment variables under "CC_API_SECRET".
+
+![Screen Shot 2021-03-11 at 9 58 17 PM](https://user-images.githubusercontent.com/4179018/110897235-b234c080-82c2-11eb-9bdb-3b10fe6df75e.png)
+
+
 5. Add "contact_data" to the environment variables under "CC_API_SCOPE".
-5. Click "Save" before moving on.
+
+![Screen Shot 2021-03-11 at 11 35 19 PM](https://user-images.githubusercontent.com/4179018/110897103-7568c980-82c2-11eb-98e8-6d65ba63e623.png)
+
+6. Click "Save" before moving on.
