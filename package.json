@@ -1,0 +1,21 @@
+{
+  "name": "serverless-oauth2",
+  "version": "1.0.0",
+  "description": "This is a Lambda function that can be triggered upon an expired access token. Tokens here are stored in AWS Secrets Manager but can be adapted to any other storage method such as writing a JSON file to AWS S3.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.862.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "serverless-http": "^2.7.0",
+    "superagent": "^6.1.0"
+  },
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
