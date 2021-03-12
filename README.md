@@ -1,4 +1,4 @@
-# Serverless Oauth2
+# Serverless OAuth2
 
 This is a Lambda function that can be triggered upon an expired access token. Tokens here are stored in AWS Secrets Manager but can be adapted to any other storage method such as writing a JSON file to AWS S3.
 
