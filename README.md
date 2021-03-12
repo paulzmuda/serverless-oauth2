@@ -67,4 +67,5 @@ This example is used to connect to the [Constant Contact V3 API](https://v3.deve
 
 ![Screen Shot 2021-03-11 at 11 35 19 PM](https://user-images.githubusercontent.com/4179018/110897103-7568c980-82c2-11eb-98e8-6d65ba63e623.png)
 
-6. Click "Save" before moving on.
+6. Click "Save" in the Constant Contact New Application page before moving on.
+7. Follow the steps under "Setup" at the top of this Readme. You should be able to authorize your application to receive your first set of tokens.
