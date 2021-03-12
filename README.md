@@ -5,7 +5,7 @@ This is a Lambda function that can be triggered upon an expired access token. To
 This example is used with the Constant Contact v3 API. Their server-flow still requires a client to approve and receive the first set of tokens. There is an additional Lambda API Server in this repository to facilitate that. Once you have the first access token / refresh token your Lambda function should be self-sufficient for automation. I decided to open this repo to the public when I was struggling to find an existing example using this flow.
 
 `sam local start-api`\
-`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json`
+`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json --profile YOUR_LOCAL_AWS_CLI_PROFILE`
 
 ## Prerequisites
 - AWS CLI
@@ -22,7 +22,7 @@ This example is used with the Constant Contact v3 API. Their server-flow still r
 ![Screen Shot 2021-03-11 at 10 21 48 PM](https://user-images.githubusercontent.com/4179018/110896900-202cb800-82c2-11eb-95a1-18b9ff90212f.png)
 
 5. Test your stored token on an authorized API Endpoint, this example checks your user privileges.
-`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json --profile YOUR_LOCAL_AWS_CLI_PROFILE`\
+`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json --profile YOUR_LOCAL_AWS_CLI_PROFILE`
 
 ### AWS Secrets Manager
 AWS Secrets Manager is being used to store and exchange tokens. Login to your AWS Console and navigate [here](https://console.aws.amazon.com/secretsmanager) to create a new secret.
