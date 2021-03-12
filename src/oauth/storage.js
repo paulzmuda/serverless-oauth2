@@ -4,7 +4,7 @@ const AWS = require('aws-sdk');
 
 const sm = new AWS.SecretsManager({
   region: process.env.AWS_REGION,
-  // credentials // if running locally
+  // credentials // should already be loaded when invoked
 });
 const secretId = process.env.AWS_SECRET_ID;
 
