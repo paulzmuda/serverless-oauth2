@@ -43,7 +43,7 @@ AWS Secrets Manager is being used to store and exchange tokens. Login to your AW
 ### AWS CLI
 To run this Lambda locally, you will need to install and configure the AWS CLI. A profile and user is required to interact with AWS. [More info here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html)
 
-Be sure to create a separate user for your machine to generate an Access key ID.
+Be sure to create a separate user for your machine to generate an Access Key ID.
 
 ### AWS SAM
 To run this Lambda locally, you will need to install and configure [AWS Serverless Application Model (SAM)](https://aws.amazon.com/serverless/sam/). You will also need Docker installed.
