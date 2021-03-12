@@ -32,7 +32,7 @@ AWS Secrets Manager is being used to store and exchange tokens. Login to your AW
 
 ![Screen Shot 2021-03-11 at 9 50 17 PM](https://user-images.githubusercontent.com/4179018/110896997-418da400-82c2-11eb-93b1-9fcaea22d775.png)
 
-3. Name your secret and then add that name to the environment variables under "AWS_SECRET_ID".
+3. Name your secret and then add that name to the environment variables under `AWS_SECRET_ID`.
 
 ![Screen Shot 2021-03-11 at 9 52 36 PM](https://user-images.githubusercontent.com/4179018/110897015-481c1b80-82c2-11eb-9d87-dbe9dc51f9f2.png)
 
@@ -54,16 +54,16 @@ This example is used to connect to the [Constant Contact V3 API](https://v3.deve
 
 1. Navigate to [My Applications](https://v3.developer.constantcontact.com/login/index.html) and create a "New Application".
 2. Change the Redirect URI to include "http://localhost:3000/callback".
-3. Copy the API Key to the environment variables under "CC_API_KEY".
+3. Copy the API Key to the environment variables under `CC_API_KEY`.
 
 ![Screen Shot 2021-03-11 at 9 56 11 PM](https://user-images.githubusercontent.com/4179018/110897191-9cbf9680-82c2-11eb-8af8-2ce035b877d0.png)
 
-4. "Generate Secret" and copy this secret to the environment variables under "CC_API_SECRET".
+4. "Generate Secret" and copy this secret to the environment variables under `CC_API_SECRET`.
 
 ![Screen Shot 2021-03-11 at 9 58 17 PM](https://user-images.githubusercontent.com/4179018/110897235-b234c080-82c2-11eb-9bdb-3b10fe6df75e.png)
 
 
-5. Add "contact_data" to the environment variables under "CC_API_SCOPE".
+5. Add "contact_data" to the environment variables under `CC_API_SCOPE`.
 
 ![Screen Shot 2021-03-11 at 11 35 19 PM](https://user-images.githubusercontent.com/4179018/110897103-7568c980-82c2-11eb-98e8-6d65ba63e623.png)
 
