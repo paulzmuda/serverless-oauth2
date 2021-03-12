@@ -5,7 +5,7 @@ This is a Lambda function that can be triggered upon an expired access token. To
 This example is used with the Constant Contact v3 API. Their server-flow still requires a client to approve and receive the first set of tokens. There is an additional Lambda API Server in this repository to facilitate that. Once you have the first access token / refresh token your Lambda function should be self-sufficient for automation. I decided to open this repo to the public when I was struggling to find an existing example using this flow.
 
 `sam local start-api`\
-`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json`\
+`sam local invoke getUserPrivileges --event events/event-get-user-privileges.json`
 
 ## Prerequisites
 - AWS CLI
