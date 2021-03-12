@@ -21,7 +21,7 @@ This example is used with the Constant Contact v3 API. Their server-flow still r
 
 ![Screen Shot 2021-03-11 at 10 21 48 PM](https://user-images.githubusercontent.com/4179018/110896900-202cb800-82c2-11eb-95a1-18b9ff90212f.png)
 
-5. Test your stored token on an authorized API Endpoint, this example checks your user privileges.
+5. Test your stored token on an authorized API Endpoint, this example checks your user privileges.\
 `sam local invoke getUserPrivileges --event events/event-get-user-privileges.json --profile YOUR_LOCAL_AWS_CLI_PROFILE`
 
 ### AWS Secrets Manager
