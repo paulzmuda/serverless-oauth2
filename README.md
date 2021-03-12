@@ -14,8 +14,8 @@ This example is used with the Constant Contact v3 API. Their server-flow still r
 - AWS Secrets Manager Secret
 
 ## Setup
-1. `npm install`\
-2. `sam local start-api --profile YOUR_LOCAL_AWS_CLI_PROFILE`\
+1. `npm install`
+2. `sam local start-api --profile YOUR_LOCAL_AWS_CLI_PROFILE`
 3. Navigate to http://localhost:3000
 4. Allow your application access.
 
